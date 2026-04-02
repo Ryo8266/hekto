@@ -1,10 +1,4 @@
-/**
- * Shopping Cart Page
- * Kết nối UI trang shopping-cart với module Cart (localStorage)
- */
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Nếu localStorage chưa có giỏ hàng, lấy dữ liệu mặc định từ HTML để seed lần đầu.
     function seedCartFromMarkupIfEmpty() {
         if (Cart.getCart().length > 0) return;
 

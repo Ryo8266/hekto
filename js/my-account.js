@@ -1,8 +1,3 @@
-/**
- * My Account - Login JavaScript
- * Xử lý đăng nhập với API validation
- */
-
 document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('loginForm');
     const emailInput = document.getElementById('email');
@@ -11,16 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const passwordError = document.getElementById('passwordError');
     const submitBtn = document.querySelector('.btn-signin');
 
-    // Kiểm tra form tồn tại
     if (!loginForm) return;
 
-    // Nếu đã đăng nhập, redirect về trang chủ
     if (Auth.isLoggedIn()) {
         window.location.href = '../index.html';
         return;
     }
-
-    // ==================== HELPER FUNCTIONS ====================
 
     function showError(input, errorElement, message) {
         input.classList.add('error');
@@ -52,20 +43,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // ==================== INIT ====================
-
-    // Load email đã nhớ (nếu có)
     const rememberedEmail = Auth.getRememberedEmail();
     if (rememberedEmail) {
         emailInput.value = rememberedEmail;
     }
 
-    // ==================== EVENT LISTENERS ====================
-
     emailInput.addEventListener('input', () => clearError(emailInput, emailError));
     passwordInput.addEventListener('input', () => clearError(passwordInput, passwordError));
-
-    // ==================== FORM SUBMIT ====================
 
     loginForm.addEventListener('submit', async function (e) {
         e.preventDefault();
@@ -73,8 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const emailValue = emailInput.value.trim();
         const passwordValue = passwordInput.value;
         let isValid = true;
-
-        // ----- Validate Client-side -----
 
         if (emailValue === '') {
             showError(emailInput, emailError, 'Email không được để trống');
@@ -102,16 +84,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 { email: 'admin@gmail.com', password: '123456', name: 'Admin' }
             ];
 
-            // Tìm user khớp
             const user = mockUsers.find(
                 u => u.email.toLowerCase() === emailValue.toLowerCase() && u.password === passwordValue
             );
 
-            // Simulate network delay
             await new Promise(resolve => setTimeout(resolve, 800));
 
             if (user) {
-                // Lưu remember me (nếu có checkbox)
                 const rememberMe = document.querySelector('input[type="checkbox"]#remember');
                 if (rememberMe && rememberMe.checked) {
                     Auth.rememberEmail(emailValue);
@@ -119,13 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     Auth.forgetEmail();
                 }
 
-                // Đăng nhập thành công - sử dụng Auth.login()
                 Auth.login({
                     email: user.email,
                     name: user.name
                 });
 
-                // Chuyển hướng về trang chủ
                 window.location.href = '../index.html';
             } else {
                 showError(passwordInput, passwordError, 'Email hoặc mật khẩu không đúng');

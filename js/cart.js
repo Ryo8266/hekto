@@ -1,26 +1,17 @@
-/**
- * Shopping Cart System
- * Quản lý giỏ hàng với localStorage
- */
-
 const Cart = {
-    // Key lưu trong localStorage
     STORAGE_KEY: 'hekto_cart',
 
-    // Lấy giỏ hàng từ localStorage
     getCart() {
         const cart = localStorage.getItem(this.STORAGE_KEY);
         return cart ? JSON.parse(cart) : [];
     },
 
-    // Lưu giỏ hàng vào localStorage
     saveCart(cart) {
         localStorage.setItem(this.STORAGE_KEY, JSON.stringify(cart));
         this.updateCartIcon();
         this.emitEvent('cart-updated');
     },
 
-    // Xóa sản phẩm khỏi giỏ
     removeItem(productId) {
         let cart = this.getCart();
         cart = cart.filter(item => item.id !== productId);
@@ -28,7 +19,6 @@ const Cart = {
         return cart;
     },
 
-    // Cập nhật số lượng
     updateQuantity(productId, quantity) {
         const cart = this.getCart();
         const item = cart.find(item => item.id === productId);
@@ -41,7 +31,6 @@ const Cart = {
         return cart;
     },
 
-    // Xóa toàn bộ giỏ hàng
     clearCart() {
         localStorage.removeItem(this.STORAGE_KEY);
         this.updateCartIcon();
@@ -49,32 +38,27 @@ const Cart = {
         return [];
     },
 
-    // Tính tổng số lượng sản phẩm
     getTotalItems() {
         const cart = this.getCart();
         return cart.reduce((total, item) => total + item.quantity, 0);
     },
 
-    // Tính tổng tiền
     getTotalPrice() {
         const cart = this.getCart();
         return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
     },
 
-    // Cập nhật số lượng trên icon giỏ hàng
     updateCartIcon() {
         const cartIcons = document.querySelectorAll('.fa-basket-shopping, .basket-icon');
         const cart = this.getCart();
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
         cartIcons.forEach(icon => {
-            // Xóa badge cũ nếu có
             const existingBadge = icon.parentElement.querySelector('.cart-badge');
             if (existingBadge) {
                 existingBadge.remove();
             }
 
-            // Thêm badge mới
             if (totalItems > 0) {
                 const badge = document.createElement('span');
                 badge.className = 'cart-badge';
@@ -100,7 +84,6 @@ const Cart = {
         });
     },
 
-    // Phát custom event
     emitEvent(eventName) {
         const cart = this.getCart();
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -110,7 +93,6 @@ const Cart = {
         }));
     },
 
-    // Render giỏ hàng ra table (cho shopping-cart.html)
     renderCartTable() {
         const cart = this.getCart();
         const tbody = document.querySelector('.cart-table tbody');
@@ -147,7 +129,6 @@ const Cart = {
             const tr = document.createElement('tr');
             tr.dataset.id = item.id;
 
-            // td-product
             const tdProduct = document.createElement('td');
             tdProduct.className = 'td-product';
 
@@ -193,12 +174,10 @@ const Cart = {
             prodInner.append(imgWrap, prodDetails);
             tdProduct.appendChild(prodInner);
 
-            // td-price
             const tdPrice = document.createElement('td');
             tdPrice.className = 'td-price';
             tdPrice.textContent = '$' + item.price.toFixed(2);
 
-            // td-qty
             const tdQty = document.createElement('td');
             tdQty.className = 'td-qty';
 
@@ -227,7 +206,6 @@ const Cart = {
             qtyBox.append(minusBtn, qtyInput, plusBtn);
             tdQty.appendChild(qtyBox);
 
-            // td-total
             const tdTotal = document.createElement('td');
             tdTotal.className = 'td-total';
             tdTotal.textContent = '$' + (item.price * item.quantity).toFixed(2);
@@ -241,7 +219,6 @@ const Cart = {
         this.updateTotalsDisplay();
     },
 
-    // Cập nhật hiển thị tổng tiền
     updateTotalsDisplay() {
         const subtotal = this.getTotalPrice();
         const shipping = subtotal > 0 ? 10 : 0;
@@ -254,11 +231,9 @@ const Cart = {
         if (totalEl) totalEl.textContent = '$' + total.toFixed(2);
     },
 
-    // Khởi tạo
     init() {
         this.updateCartIcon();
 
-        // Lắng nghe khi localStorage thay đổi từ tab khác
         window.addEventListener('storage', (e) => {
             if (e.key === this.STORAGE_KEY) {
                 this.updateCartIcon();
@@ -268,5 +243,4 @@ const Cart = {
     }
 };
 
-// Tự động khởi tạo khi DOM ready
 document.addEventListener('DOMContentLoaded', () => Cart.init());

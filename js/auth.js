@@ -1,28 +1,19 @@
-/**
- * Authentication System
- * Quản lý trạng thái đăng nhập với localStorage
- */
-
 const Auth = {
-    // Keys lưu trong localStorage
     KEYS: {
         IS_LOGGED_IN: 'isLoggedIn',
         CURRENT_USER: 'currentUser',
         REMEMBER_ME: 'rememberEmail'
     },
 
-    // Kiểm tra đã đăng nhập chưa
     isLoggedIn() {
         return localStorage.getItem(this.KEYS.IS_LOGGED_IN) === 'true';
     },
 
-    // Lấy thông tin user hiện tại
     getCurrentUser() {
         const user = localStorage.getItem(this.KEYS.CURRENT_USER);
         return user ? JSON.parse(user) : null;
     },
 
-    // Đăng nhập
     login(userData) {
         localStorage.setItem(this.KEYS.IS_LOGGED_IN, 'true');
         localStorage.setItem(this.KEYS.CURRENT_USER, JSON.stringify({
@@ -33,34 +24,28 @@ const Auth = {
         this.updateHeaderUI();
     },
 
-    // Đăng xuất
     logout() {
         localStorage.removeItem(this.KEYS.IS_LOGGED_IN);
         localStorage.removeItem(this.KEYS.CURRENT_USER);
         this.updateHeaderUI();
 
-        // Chuyển về trang chủ
         window.location.href = window.location.pathname.includes('/pages/')
             ? '../index.html'
             : 'index.html';
     },
 
-    // Lưu email để nhớ
     rememberEmail(email) {
         localStorage.setItem(this.KEYS.REMEMBER_ME, email);
     },
 
-    // Lấy email đã nhớ
     getRememberedEmail() {
         return localStorage.getItem(this.KEYS.REMEMBER_ME) || '';
     },
 
-    // Xóa email đã nhớ
     forgetEmail() {
         localStorage.removeItem(this.KEYS.REMEMBER_ME);
     },
 
-    // Cập nhật UI Header
     updateHeaderUI() {
         const loginLinks = document.querySelectorAll('.login');
         const favouriteLinks = document.querySelectorAll('.favourite');
@@ -69,7 +54,6 @@ const Auth = {
         const user = this.getCurrentUser();
 
         if (isLoggedIn && user) {
-            // Đã đăng nhập: hiển thị tên user và link logout trực tiếp
             loginLinks.forEach(link => {
                 link.textContent = '';
                 const icon = document.createElement('i');
@@ -89,7 +73,6 @@ const Auth = {
                 };
             });
         } else {
-            // Chưa đăng nhập: trả về Login + Wishlist mặc định
             loginLinks.forEach(link => {
                 const isPagesFolder = window.location.pathname.includes('/pages/');
                 link.textContent = 'Login ';
@@ -111,14 +94,12 @@ const Auth = {
         }
     },
 
-    // Khởi tạo
     init() {
         this.updateHeaderUI();
         Theme.init();
     }
 };
 
-// ==================== THEME TOGGLE ====================
 const Theme = {
     STORAGE_KEY: 'hekto_theme',
 
@@ -147,5 +128,4 @@ const Theme = {
     }
 };
 
-// Tự động khởi tạo khi DOM ready
 document.addEventListener('DOMContentLoaded', () => Auth.init());

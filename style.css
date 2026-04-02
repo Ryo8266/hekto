@@ -1292,8 +1292,6 @@ header {
     box-shadow: -5px 5px 0px 0px #7E33E0;
 }
 
-/* Removed - handled by .category-card:hover .btn-view-shop above */
-
 .cat-info {
     text-align: center;
 }
@@ -1532,7 +1530,6 @@ header {
     color: #FB2E86;
 }
 
-/* Blog Sidebar */
 .blog-sidebar {
     width: 270px;
     min-width: 270px;
@@ -2267,7 +2264,6 @@ footer {
     color: #fff;
 }
 
-/* Product Info Tabs */
 .product-info-tabs {
     padding: 0 60px 60px;
 }
@@ -2336,7 +2332,6 @@ footer {
     margin-top: 3px;
 }
 
-/* Related Products */
 .related-products {
     padding: 0 60px 60px;
 }
@@ -2695,7 +2690,6 @@ footer {
    RESPONSIVE STYLES - MOBILE FIRST
    ======================================== */
 
-/* Tablet and smaller (max-width: 991px) */
 @media screen and (max-width: 991px) {
     .upper {
         flex-direction: column;
@@ -2815,7 +2809,6 @@ footer {
     }
 }
 
-/* Mobile (max-width: 767px) */
 @media screen and (max-width: 767px) {
     .upper-left {
         flex-direction: column;
@@ -2938,7 +2931,6 @@ footer {
     }
 }
 
-/* Small mobile (max-width: 479px) */
 @media screen and (max-width: 479px) {
     .title {
         font-size: 24px;
@@ -3547,7 +3539,6 @@ footer {
     border-color: #7E33E0;
 }
 
-/* Shop card improvements */
 .img-wrapper {
     position: relative;
     overflow: hidden;
@@ -3616,7 +3607,6 @@ footer {
     margin-bottom: 8px;
 }
 
-/* Use .dot inside .color-dots to avoid conflict with slider dots */
 .color-dots .dot {
     width: 14px;
     height: 14px;
@@ -3786,7 +3776,6 @@ body.dark a:hover {
     color: #c084fc;
 }
 
-/* Header lower bar */
 body.dark .lower {
     background-color: #1e1e1e;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -3810,7 +3799,6 @@ body.dark .lower form input {
     color: #e0e0e0;
 }
 
-/* Headings */
 body.dark h1,
 body.dark h2,
 body.dark h3,
@@ -3820,7 +3808,6 @@ body.dark h6 {
     color: #e0e0e0;
 }
 
-/* Page header breadcrumb */
 body.dark .page-header {
     background-color: #1a1a2e;
 }
@@ -3830,7 +3817,6 @@ body.dark .breadcrumbs a {
     color: #e0e0e0;
 }
 
-/* Product cards */
 body.dark .product-card {
     background-color: #1e1e1e;
 }
@@ -3841,12 +3827,10 @@ body.dark .product-price {
     color: #e0e0e0;
 }
 
-/* Shopex cards */
 body.dark .shopex-item {
     background-color: #1e1e1e;
 }
 
-/* Shop / latest cards */
 body.dark .shop-card,
 body.dark .latest-card {
     background-color: #1e1e1e;
@@ -3856,18 +3840,15 @@ body.dark .shop-card .title {
     color: #e0e0e0;
 }
 
-/* Trending cards */
 body.dark .trending-big-card,
 body.dark .trending-small-card {
     background-color: #1e1e1e;
 }
 
-/* Hover action buttons */
 body.dark .hover-actions a {
     background-color: #2a2a2a;
 }
 
-/* Footer */
 body.dark footer {
     background-color: #1a1a1a;
     color: #e0e0e0;
@@ -3886,19 +3867,16 @@ body.dark .footer-bottom {
     background-color: #111;
 }
 
-/* Subscribe form */
 body.dark .subscribe-form input {
     background-color: #2a2a2a;
     color: #e0e0e0;
 }
 
-/* Newsletter & unique features sections */
 body.dark .newsletter-section,
 body.dark .unique-features {
     background-color: #1a1a1a;
 }
 
-/* Product detail */
 body.dark .product-details-area,
 body.dark .product-info-tabs {
     background-color: #121212;
@@ -3908,24 +3886,20 @@ body.dark .tab-btn {
     color: #e0e0e0;
 }
 
-/* Order completed */
 body.dark .order-completed {
     background-color: #1e1e1e;
 }
 
-/* Error page */
 body.dark .error-page {
     background-color: #121212;
 }
 
-/* About, contact, faq */
 body.dark .general-info-section,
 body.dark .contact-section,
 body.dark .about-history {
     background-color: #121212;
 }
 
-/* Cart table */
 body.dark .cart-table th {
     color: #e0e0e0;
     border-bottom-color: #333;
@@ -3958,7 +3932,6 @@ body.dark .td-total {
     color: #c084fc;
 }
 
-/* Sort bar */
 body.dark .product-sort-bar {
     background-color: #121212;
 }
@@ -3987,12 +3960,10 @@ body.dark .view-icon.active {
     color: #fff;
 }
 
-/* Shop grid cards */
 body.dark .shop-card {
     background-color: #1e1e1e;
 }
 
-/* Products list cards */
 body.dark .list-card {
     background-color: #1e1e1e;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
