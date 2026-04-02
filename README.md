@@ -1,2 +1,2 @@
 # hekto
-Simple web app using html, css, JS for learning
+Simple web app for learning using html, css, JS
