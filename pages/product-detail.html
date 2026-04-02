@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font Google - Optimized -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="upper">
+            <div class="upper-left">
+                <a href="/"><i class="fa-regular fa-envelope"></i>
+                    akuma3008@gmail.com</a>
+                <a href="/"><i class="fa-solid fa-phone"></i> 0942441238</a>
+            </div>
+            <div class="upper-right">
+                <div class="setting">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện"><i
+                            class="fa-solid fa-moon"></i></button>
+                    <a href="/" class="drop-down">English <i class="fa-solid fa-caret-down"></i></a>
+                    <a href="/" class="drop-down">USD <i class="fa-solid fa-caret-down"></i></a>
+                    <a href="my-account.html" class="login">Login <i class="fa-regular fa-user"></i></a>
+                    <a href="/" class="favourite">Wishlist <i class="fa-regular fa-heart"></i></a>
+                    <a href="shopping-cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lower">
+            <div class="lower-left">
+                <h1>Hekto</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="../index.html">Home<i class="fa-solid fa-caret-down"></i></a>
+                        </li>
+                        <li><a href="faq.html">Pages</a></li>
+                        <li><a href="products-grid.html">Products</a></li>
+                        <li><a href="blog-page.html">Blog</a></li>
+                        <li><a href="shopping-cart.html">Shop</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <form action="">
+                <input type="text" placeholder="" aria-label="Search" />
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Product Details</h1>
+
+            <div class="breadcrumbs">
+                <a href="#">Home</a>
+                <span class="separator">.</span>
+                <a href="#">Pages</a>
+                <span class="separator">.</span>
+                <span class="current">Product Details</span>
+            </div>
+        </section>
+        <section class="product-details-area">
+            <div class="product-details-card">
+                <div class="product-gallery">
+                    <div class="gallery-thumbs">
+                        <img src="../img_folder/03da029b0a8cccaf41b91c6f0575413c23965b0d.jpg" alt="Thumb 1">
+                        <img src="../img_folder/ecbeac3fa9e2004573e1a08397ce10b25d96422c.jpg" alt="Thumb 2">
+                        <img src="../img_folder/848b90941cd9a4e9bebaa6cfba09c590bd700c1b.jpg" alt="Thumb 3">
+                    </div>
+                    <div class="gallery-main">
+                        <img src="../img_folder/5e2937d7bae8dbd83e04e7a1c34f5c4b911eba0d.jpg" alt="Main Product">
+                    </div>
+                </div>
+
+                <div class="product-info-block">
+                    <h2 class="pd-title">Playwood arm chair</h2>
+                    <div class="pd-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="review-count">(22)</span>
+                    </div>
+                    <div class="pd-price">
+                        <span class="new">$32.00</span>
+                        <span class="old">$32.00</span>
+                    </div>
+                    <div class="pd-color">
+                        <span class="label">Color</span>
+                    </div>
+                    <p class="pd-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et
+                        volutpat sit.
+                    </p>
+                    <div class="pd-actions">
+                        <button class="btn-add-cart">Add To Cart</button>
+                        <button class="btn-wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="pd-meta">
+                        <p><strong>Categories:</strong></p>
+                        <p><strong>Tags:</strong></p>
+                        <div class="pd-share">
+                            <strong>Share</strong>
+                            <div class="socials">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-info-tabs">
+            <ul class="info-nav">
+                <li class="active">Description</li>
+                <li>Additional Info</li>
+                <li>Reviews</li>
+                <li>Video</li>
+            </ul>
+
+            <div class="tab-pane">
+                <h3 class="info-heading">Varius tempor.</h3>
+                <p class="info-text">
+                    Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend
+                    habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit
+                    consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam
+                    tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam
+                    arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .
+                </p>
+
+                <h3 class="info-heading">More details</h3>
+                <ul class="detail-list">
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span>Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis
+                            justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span>Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis
+                            justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span>Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis
+                            justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span>Aliquam dis vulputate vulputate integer sagittis. Faucibus ds diam arcu, nulla lobortis
+                            justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .</span>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+        <section class="related-products">
+            <h2 class="rp-title">Related Products</h2>
+
+            <div class="rp-grid">
+
+                <div class="rp-card">
+                    <div class="rp-img-box">
+                        <img src="../img_folder/a90b9c75baca406cc54e0dcbe487208a9b0cf9c0.jpg" alt="Mens Fashion Wear">
+                    </div>
+                    <div class="rp-content">
+                        <div class="rp-header">
+                            <h3 class="rp-name">Mens Fashion Wear</h3>
+                            <div class="rp-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="rp-price">$43.00</p>
+                    </div>
+                </div>
+
+                <div class="rp-card">
+                    <div class="rp-img-box">
+                        <img src="../img_folder/af118034b9abadac8084fb983ebb2042e90efea6.jpg" alt="Women’s Fashion">
+                    </div>
+                    <div class="rp-content">
+                        <div class="rp-header">
+                            <h3 class="rp-name">Women’s Fashion</h3>
+                            <div class="rp-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="rp-price">$67.00</p>
+                    </div>
+                </div>
+
+                <div class="rp-card">
+                    <div class="rp-img-box">
+                        <img src="../img_folder/bc2b04a84c892f40975cec3177c5bb87c239bce4.jpg" alt="Wolx Dummy Fashion">
+                    </div>
+                    <div class="rp-content">
+                        <div class="rp-header">
+                            <h3 class="rp-name">Wolx Dummy Fashion</h3>
+                            <div class="rp-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="rp-price">$67.00</p>
+                    </div>
+                </div>
+
+                <div class="rp-card">
+                    <div class="rp-img-box">
+                        <img src="../img_folder/928cca64e1cacdb9866ae8672ef2f5cb4d1f23a2.jpg"
+                            alt="Top Wall Digital Clock">
+                    </div>
+                    <div class="rp-content">
+                        <div class="rp-header">
+                            <h3 class="rp-name">Top Wall Digital Clock</h3>
+                            <div class="rp-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="rp-price">$51.00</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <img src="../img_folder/8b8f73ef0917d8479a5c41ee633cb4a6233f64b7.png" alt="Partner Logos"
+            class="partner-logos" />
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-col col-brand">
+                    <h2 class="footer-logo">Hekto</h2>
+
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter Email Address" required aria-label="Enter your email" />
+                        <button type="submit">Sign Up</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <p class="contact-label">Contact Info</p>
+                        <p class="contact-address">
+                            17 Princess Road, London, Greater London NW1
+                            8JR, UK
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Laptops & Computers</a></li>
+                        <li><a href="#">Cameras & Photography</a></li>
+                        <li><a href="#">Smart Phones & Tablets</a></li>
+                        <li><a href="#">Video Games & Consoles</a></li>
+                        <li><a href="#">Waterproof Headphones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Orders History</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Browse the Shop</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Pre-Built Pages</a></li>
+                        <li><a href="#">Visual Composer Elements</a></li>
+                        <li><a href="#">WooCommerce Pages</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-wrap">
+                <p class="copyright-text">©Webecy - All Rights Reserved</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Grid</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font Google - Optimized -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="upper">
+            <div class="upper-left">
+                <a href="/"><i class="fa-regular fa-envelope"></i>
+                    akuma3008@gmail.com</a>
+                <a href="/"><i class="fa-solid fa-phone"></i> 0942441238</a>
+            </div>
+            <div class="upper-right">
+                <div class="setting">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện"><i
+                            class="fa-solid fa-moon"></i></button>
+                    <a href="/" class="drop-down">English <i class="fa-solid fa-caret-down"></i></a>
+                    <a href="/" class="drop-down">USD <i class="fa-solid fa-caret-down"></i></a>
+                    <a href="my-account.html" class="login">Login <i class="fa-regular fa-user"></i></a>
+                    <a href="/" class="favourite">Wishlist <i class="fa-regular fa-heart"></i></a>
+                    <a href="shopping-cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lower">
+            <div class="lower-left">
+                <h1>Hekto</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="../index.html">Home<i class="fa-solid fa-caret-down"></i></a>
+                        </li>
+                        <li><a href="faq.html">Pages</a></li>
+                        <li><a href="products-grid.html">Products</a></li>
+                        <li><a href="blog-page.html">Blog</a></li>
+                        <li><a href="shopping-cart.html">Shop</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <form action="">
+                <input type="text" placeholder="" aria-label="Search" />
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section class="page-header">
+            <h1 class="page-title">Shop Grid Default</h1>
+
+            <div class="breadcrumbs">
+                <a href="#">Home</a>
+                <span class="separator">.</span>
+                <a href="#">Pages</a>
+                <span class="separator">.</span>
+                <span class="current">Shop Grid Default</span>
+            </div>
+        </section>
+        <section class="product-sort-bar">
+            <div class="sort-left">
+                <h2 class="sort-title">Ecommerce Acceories & Fashion item</h2>
+                <p class="sort-meta">About 9,620 results (0.62 seconds)</p>
+            </div>
+
+            <div class="sort-right">
+                <div class="control-group">
+                    <label for="per-page">Per Page:</label>
+                    <input type="text" id="per-page" class="input-small">
+                </div>
+
+                <div class="control-group">
+                    <label for="sort-by">Sort By:</label>
+                    <div class="select-wrap">
+                        <select id="sort-by">
+                            <option value="best-match">Best Match</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="control-group view-group">
+                    <span class="label-view">View:</span>
+                    <a href="./products-grid.html" class="view-icon"><i class="fa-solid fa-border-all"></i></a>
+                    <a href="./products-list.html" class="view-icon"><i class="fa-solid fa-list"></i></a>
+                </div>
+
+                <div class="control-group">
+                    <input type="text" class="input-large">
+                </div>
+            </div>
+        </section>
+        <section class="shop-products">
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/4851c90603270716b886324ea4b54a2320807d8b.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Vel elit euismod</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/9db5545f6002c578779f313538a8a68e1a6f8050.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Ultricies condimentum</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/795ef30740fb6d72006bc9fe7a747b3dfca0a5de.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Vitae suspendisse sed</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/c298504dadeb68467abfedd08c1e1d67526e0d7a.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Sed at fermentum</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/fd2f84fd2c2d0ada0fbe15246b3ac6692d538aea.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Fusce pellentesque at</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/8143e8cd09780c98df0e8ca5a7c576a7097d9a4d.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Vestibulum magna</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/59def39f4cf484a463c3db3e312bea9e660f449d.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Sollicitudin amet orci</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/68de911f7877d7223d13169b98bd9540d24d5673.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Ultrices mauris sit</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/dad6283fcf563ab816e36d2754c94e88b5f4ed21.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Pellentesque condimentum</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/5d23d89ffb399a001ca2c9596b7e4e167945bbdc.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Cras scelerisque velit</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/93eae296578b831cdad3eb6622f8100a707cf7c3.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Lectus vulputate faucibus</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shop-card">
+                <div class="img-wrapper">
+                    <img src="../img_folder/c298504dadeb68467abfedd08c1e1d67526e0d7a.png" alt="Product">
+                    <div class="hover-actions">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#"><i class="fas fa-search-plus"></i></a>
+                        <a href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Purus risus, ut</h3>
+                    <div class="color-dots">
+                        <span class="dot orange"></span><span class="dot pink"></span><span class="dot purple"></span>
+                    </div>
+                    <div class="price-box"><span class="new-price">$26.00</span><span class="old-price">$42.00</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <img src="../img_folder/8b8f73ef0917d8479a5c41ee633cb4a6233f64b7.png" alt="Partner Logos"
+            class="partner-logos" />
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-col col-brand">
+                    <h2 class="footer-logo">Hekto</h2>
+
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Enter Email Address" required aria-label="Enter your email" />
+                        <button type="submit">Sign Up</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <p class="contact-label">Contact Info</p>
+                        <p class="contact-address">
+                            17 Princess Road, London, Greater London NW1
+                            8JR, UK
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Laptops & Computers</a></li>
+                        <li><a href="#">Cameras & Photography</a></li>
+                        <li><a href="#">Smart Phones & Tablets</a></li>
+                        <li><a href="#">Video Games & Consoles</a></li>
+                        <li><a href="#">Waterproof Headphones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Customer Care</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Discount</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Orders History</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Pages</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Browse the Shop</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Pre-Built Pages</a></li>
+                        <li><a href="#">Visual Composer Elements</a></li>
+                        <li><a href="#">WooCommerce Pages</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-wrap">
+                <p class="copyright-text">©Webecy - All Rights Reserved</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>
